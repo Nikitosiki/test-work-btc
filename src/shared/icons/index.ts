@@ -1,3 +1,7 @@
 export * from './TablerMenu2'
 export * from './TablerRefresh'
 export * from './TablerReload'
+export * from './TablerSettings'
+export * from './TablerChartHistogram'
+export * from './TablerShoppingCart'
+export * from './TablerCoin'

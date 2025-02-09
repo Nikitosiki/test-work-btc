@@ -4,7 +4,6 @@ import prettier from 'eslint-config-prettier'
 import _import from 'eslint-plugin-import'
 import jsdoc from 'eslint-plugin-jsdoc'
 import react from 'eslint-plugin-react'
-import tailwind from 'eslint-plugin-tailwindcss'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import hooks from 'eslint-plugin-react-hooks'
@@ -17,7 +16,6 @@ export default tseslint.config([
   eslint.configs.recommended,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
-  ...tailwind.configs['flat/recommended'],
   react.configs.flat.recommended,
   jsdoc.configs['flat/recommended-typescript'],
   // _import.flatConfigs.recommended,
@@ -43,16 +41,7 @@ export default tseslint.config([
     settings: {
       react: {
         version: 'detect',
-      },
-      tailwindcss: {
-        callees: [
-          'animate-none',
-          'animate-spin',
-          'animate-ping',
-          'animate-pulse',
-          'animate-bounce',
-        ],
-      },
+      }
     },
     rules: {
       'jsdoc/require-jsdoc': 'off',

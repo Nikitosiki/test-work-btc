@@ -2,13 +2,13 @@ import { HeroUIProvider } from '@heroui/react'
 import { FC } from 'react'
 
 import Dashboard from '@/pages/Dashboard'
-import TopAppBar from '@/widgets/TopAppBar'
 import NavigationBar from '@/widgets/NavigationBar'
+import TopAppBar from '@/widgets/TopAppBar'
 
 const App: FC = () => {
   return (
     <HeroUIProvider>
-      <div className="bg-custom-bg flex min-h-screen flex-col">
+      <div className="flex min-h-screen flex-col bg-custom-bg text-white dark">
         <TopAppBar />
         <Dashboard />
         <NavigationBar className="mt-auto" />

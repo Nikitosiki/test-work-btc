@@ -13,6 +13,9 @@ export default {
         'custom-bg-light': '#18283c',
         'custom-budge': '#fb9818',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
   darkMode: 'class',

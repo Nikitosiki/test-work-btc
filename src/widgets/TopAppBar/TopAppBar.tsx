@@ -7,7 +7,10 @@ interface TopAppBarProps {}
 
 const TopAppBar: FC<TopAppBarProps> = ({}) => {
   return (
-    <Navbar isBlurred={false} isBordered={false} className="bg-inherit">
+    <Navbar
+      isBlurred={false}
+      isBordered={false}
+      className="relative bg-inherit">
       <NavbarBrand>
         <NavbarItem>
           <TablerMenu2 className="text-custom-gray" />
@@ -15,7 +18,7 @@ const TopAppBar: FC<TopAppBarProps> = ({}) => {
       </NavbarBrand>
       <NavbarContent className="gap-4" justify="center">
         <NavbarItem>
-          <p className="text-custom-gray font-semibold">Dashboard</p>
+          <p className="font-semibold text-custom-gray">Dashboard</p>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
@@ -23,6 +26,7 @@ const TopAppBar: FC<TopAppBarProps> = ({}) => {
           <TablerRefresh className="text-custom-gray" />
         </NavbarItem>
       </NavbarContent>
+      <div className="bg-gradient-radial absolute left-[calc(50%-10rem)] z-[-1] -top-40 size-80 rounded-full from-[#02315098] to-40% to-transparent" />
     </Navbar>
   )
 }

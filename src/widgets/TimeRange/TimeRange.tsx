@@ -5,12 +5,13 @@ interface TimeRangeProps {}
 
 const TimeRange: FC<TimeRangeProps> = ({}) => {
   return (
-    <div className="flex items-center gap-2 text-custom-gray">
-      <p className="font-semibold pb-1">Time Range:</p>
+    <div className="flex items-center gap-2 w-full text-custom-gray">
+      <p className="font-semibold pb-1 text-nowrap">Time Range:</p>
       <Tabs
         aria-label="Time Range"
         variant="light"
         classNames={{
+          base: "overflow-x-auto",
           tabList: 'gap-4',
           tab: 'border border-custom-gray data-[selected=true]:border-white rounded-full h-7 w-[4.5rem] pb-[0.37rem]',
           tabContent:

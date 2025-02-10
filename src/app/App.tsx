@@ -8,9 +8,11 @@ import TopAppBar from '@/widgets/TopAppBar'
 const App: FC = () => {
   return (
     <HeroUIProvider>
-      <div className="flex min-h-screen flex-col bg-custom-bg text-white dark">
+      <div className="flex max-h-screen min-h-screen flex-col bg-custom-bg text-white dark">
         <TopAppBar />
-        <Dashboard />
+        <div className="overflow-y-auto">
+          <Dashboard />
+        </div>
         <NavigationBar className="mt-auto" />
       </div>
     </HeroUIProvider>

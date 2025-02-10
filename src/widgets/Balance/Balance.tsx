@@ -9,10 +9,10 @@ const Balance: FC<BalanceProps> = ({}) => {
         TRADING CAPITAL
       </span>
       <div className="flex justify-between">
-        <span className="text-center text-4xl tracking-tight">1.00865 BTC</span>
+        <span className="sm:text-4xl text-3xl tracking-tight">1.00865 BTC</span>
 
         <div>
-          <div className="flex items-center gap-2 font-semibold leading-snug">
+          <div className="flex items-center gap-2 font-semibold sm:leading-snug leading-none">
             <span className="text-sm text-custom-gray">BALANCE:</span>
             <span className="ml-auto text-white">10 850</span>
             <img src="/images/H.png" alt="H" className="size-[1.2rem]" />

@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import Balance from '@/widgets/Balance'
+import Bots from '@/widgets/Bots/Bots'
 import Chart from '@/widgets/Chart'
 import TimeRange from '@/widgets/TimeRange'
 
@@ -13,8 +14,8 @@ const Dashboard: FC<DashboardProps> = ({}) => {
         <Balance />
       </div>
       <Chart />
-      <div className="mx-auto w-full max-w-[1024px] px-6">
-        bottom
+      <div className="mx-auto w-full max-w-[1024px] space-y-4 px-6 py-4">
+        <Bots />
         <TimeRange />
       </div>
     </>

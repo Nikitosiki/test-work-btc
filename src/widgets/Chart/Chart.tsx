@@ -29,7 +29,7 @@ const Chart: FC<ChartProps> = ({ className }) => {
     datasets: [
       {
         fill: true,
-        data: [5, 7, 4, 8, 6, 9, 5, 7, 6, 10, 8, 5, 7, 6, 8, 9, 5, 6, 4, 7],
+        data: [2, 5, 7, 4, 8, 6, 9, 5, 7, 6, 10, 8, 5, 7, 6, 8, 9, 5, 6, 4, 7],
         borderColor: '#007cdd',
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
         tension: 0.4,

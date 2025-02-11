@@ -19,7 +19,7 @@ const BotItem: FC<BotItemProps> = ({
 }) => {
   return (
     <div
-      className={`relative cursor-pointer rounded-sm ${isSelect ? 'bg-[#1a3450]' : 'bg-custom-bg-light'}`}>
+      className={`relative cursor-pointer select-none rounded-sm ${isSelect ? 'bg-[#1a3450]' : 'bg-custom-bg-light'}`}>
       <div className="bg-gradient-radial flex size-full flex-col items-center justify-end gap-1 rounded-lg from-custom-bg-light from-60% to-transparent p-4 pb-8">
         <img
           src={`/images/bot-${number}.png`}

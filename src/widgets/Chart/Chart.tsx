@@ -19,11 +19,9 @@ ChartJS.register(
   Filler,
 )
 
-interface ChartProps {
-  className?: string
-}
+interface ChartProps {}
 
-const Chart: FC<ChartProps> = ({ className }) => {
+const Chart: FC<ChartProps> = ({}) => {
   const data = {
     labels: ['22.04', '23.04', '24.04', '25.04', '26.04'],
     datasets: [
@@ -39,6 +37,7 @@ const Chart: FC<ChartProps> = ({ className }) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       tooltip: {
         mode: 'index' as const,
@@ -62,8 +61,8 @@ const Chart: FC<ChartProps> = ({ className }) => {
   }
 
   return (
-    <div className="relative">
-      <Line data={data} options={options} className={className} />
+    <div className="relative w-full">
+      <Line data={data} options={options} className={'size-full'} />
 
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <span className="text-2xl font-medium text-green-400">+32.6%</span>

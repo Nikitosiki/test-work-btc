@@ -13,7 +13,9 @@ const Dashboard: FC<DashboardProps> = ({}) => {
       <div className="mx-auto w-full max-w-[1024px] px-6">
         <Balance />
       </div>
-      <Chart />
+      <div className="flex min-h-0 w-full flex-1">
+        <Chart />
+      </div>
       <div className="mx-auto w-full max-w-[1024px] space-y-4 px-6 py-4">
         <Bots />
         <TimeRange />

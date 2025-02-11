@@ -9,26 +9,20 @@ const App: FC = () => {
   // const [interval, setinterval] = useState('one')
   // const [first, setfirst] = useState(localStorage.getItem('interval') || '')
 
-
   // useEffect(() => {
   //   setfirst(data.load(setfirst))
   // }, [interval])
-  
 
   // useEffect(() => {
   //   localStorage.setItem('first', first)
-  
-  // }, [first])
-  
 
+  // }, [first])
 
   return (
     <HeroUIProvider>
-      <div className="flex max-h-dvh min-h-dvh flex-col bg-custom-bg text-white dark">
+      <div className="flex max-h-dvh min-h-dvh w-full flex-col bg-custom-bg text-white dark">
         <TopAppBar />
-        <div className="overflow-y-auto">
-          <Dashboard />
-        </div>
+        <Dashboard />
         <NavigationBar className="mt-auto" />
       </div>
     </HeroUIProvider>

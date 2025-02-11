@@ -28,7 +28,10 @@ export interface TradingStoreState {
 
 export const useTradingStore = create<TradingStoreState>((set) => ({
   data: JSON.parse(localStorage.getItem('trading_data') || 'null'),
-  interval: '24h',
+  interval:
+    (localStorage.getItem(
+      'trading_interval',
+    ) as TradingStoreState['interval']) || '24h',
 
   loadData: async () => {
     try {
@@ -38,16 +41,19 @@ export const useTradingStore = create<TradingStoreState>((set) => ({
         return
       }
 
-      const response = await fetch('/data.min.json')
-      if (!response.ok) throw new Error('Ошибка загрузки данных')
+      const response = await fetch('/data.json')
+      if (!response.ok) throw new Error('Error loading data')
 
       const jsonData: TradingData = await response.json()
       localStorage.setItem('trading_data', JSON.stringify(jsonData))
       set({ data: jsonData })
     } catch (error) {
-      console.error('Ошибка при загрузке данных:', error)
+      console.error('Error:', error)
     }
   },
 
-  setInterval: (interval) => set({ interval }),
+  setInterval: (interval) => {
+    localStorage.setItem('trading_interval', interval)
+    set({ interval })
+  },
 }))

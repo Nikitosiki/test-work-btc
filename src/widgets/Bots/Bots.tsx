@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import BotItem from './components/BotItem'
+import BotItem from '@/shared/ui/BotItem'
 
 interface BotsProps {}
 
@@ -8,12 +8,7 @@ const Bots: FC<BotsProps> = ({}) => {
   return (
     <div className="grid grid-cols-3 gap-[0.1rem]">
       <BotItem name="ATTACK" percentage="-8.2%" isPositive={false} number={6} />
-      <BotItem
-        name="PLACE BOT HERE"
-        percentage="0"
-        number={5}
-        isPlace
-      />
+      <BotItem name="PLACE BOT HERE" percentage="0" number={5} isPlace />
       <BotItem
         name="BALANCE"
         percentage="-3.7%"

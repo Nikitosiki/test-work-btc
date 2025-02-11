@@ -1,22 +1,17 @@
 import { HeroUIProvider } from '@heroui/react'
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect } from 'react'
 
 import Dashboard from '@/pages/Dashboard'
+import { useTradingStore } from '@/store'
 import NavigationBar from '@/widgets/NavigationBar'
 import TopAppBar from '@/widgets/TopAppBar'
 
 const App: FC = () => {
-  // const [interval, setinterval] = useState('one')
-  // const [first, setfirst] = useState(localStorage.getItem('interval') || '')
+  const loadData = useTradingStore((state) => state.loadData)
 
-  // useEffect(() => {
-  //   setfirst(data.load(setfirst))
-  // }, [interval])
-
-  // useEffect(() => {
-  //   localStorage.setItem('first', first)
-
-  // }, [first])
+  useEffect(() => {
+    loadData()
+  }, [loadData])
 
   return (
     <HeroUIProvider>

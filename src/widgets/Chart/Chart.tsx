@@ -7,8 +7,10 @@ import {
   Tooltip,
   Filler,
 } from 'chart.js'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
+
+import { useTradingStore } from '@/store'
 
 ChartJS.register(
   CategoryScale,
@@ -21,13 +23,27 @@ ChartJS.register(
 
 interface ChartProps {}
 
+const generateRandomData = (numPoints: number) => {
+  return Array.from(
+    { length: numPoints },
+    () => Math.floor(Math.random() * 10) + 1,
+  )
+}
+
 const Chart: FC<ChartProps> = ({}) => {
+  const interval = useTradingStore((state) => state.interval)
+  const [numbers, setNumbers] = useState<number[]>([])
+
+  useEffect(() => {
+    setNumbers(generateRandomData(21))
+  }, [interval])
+
   const data = {
     labels: ['22.04', '23.04', '24.04', '25.04', '26.04'],
     datasets: [
       {
         fill: true,
-        data: [2, 5, 7, 4, 8, 6, 9, 5, 7, 6, 10, 8, 5, 7, 6, 8, 9, 5, 6, 4, 7],
+        data: numbers,
         borderColor: '#007cdd',
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
         tension: 0.4,

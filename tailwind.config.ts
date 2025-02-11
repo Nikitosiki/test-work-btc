@@ -6,6 +6,9 @@ export default {
     './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+    },
     extend: {
       colors: {
         'custom-gray': '#50627a',
